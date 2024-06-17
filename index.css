@@ -151,11 +151,12 @@
     }
 
     #login-submitbtn {
-        padding: 15px 17px;
+        padding: 12px 17px;
     }
 
     #login-emailId,
     #login-password {
         padding: 15px 7px;
+        font-size: 20px;
     }
 }
