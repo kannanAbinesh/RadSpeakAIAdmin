@@ -152,6 +152,7 @@
 
     #login-submitbtn {
         padding: 12px 17px;
+        width: 100%;
     }
 
     #login-emailId,
