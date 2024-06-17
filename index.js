@@ -1,3 +1,7 @@
+const mobileShowPassword = document.getElementById('togglePassword-show');
+const mobileHidePassword = document.getElementById('togglePassword-hide');
+mobileHidePassword.style.display = 'none';
+
 const emailId = document.getElementById('login-emailId');
 const password = document.getElementById("login-password");
 const showPassword = document.getElementById('show-password-checkbox');
@@ -5,6 +9,18 @@ const loginSubmitBtn = document.getElementById('login-submitbtn');
 
 emailId.value = 'abineshkannan98@gmail.com';
 password.value = 'Qwerty@123';
+
+mobileShowPassword.onclick = () => {
+    mobileShowPassword.style.display = 'none';
+    mobileHidePassword.style.display = 'block';
+    password.type = 'text';
+};
+
+mobileHidePassword.onclick = () => {
+    mobileShowPassword.style.display = 'block';
+    mobileHidePassword.style.display = 'none';
+    password.type = 'password';
+};
 
 showPassword?.addEventListener('change', () => {
     if (showPassword.checked) password.type = 'text';

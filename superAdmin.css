@@ -32,3 +32,24 @@
     font-size: 46px;
     cursor: pointer;
 }
+
+#super-admin-contaier {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#add-user-btn {
+    color: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(249, 2, 2, 0.829);;
+    float: right;
+    padding: 7px;
+    cursor: pointer;
+    background-color: rgba(249, 2, 2, 0.746);;
+}
+
+#super-admin-header-container {
+    display: flex;
+    justify-content: space-between;
+}

@@ -26,31 +26,24 @@
 
     <div id="container"></div>
 
-    <button onclick="myFunc()">super</button>
-    <button onclick="myFuncTwo()">admin</button>
-
     <template id="super-admin-template">
-        <h1>super admin</h1>
-    </template>
-
-    <template id="admin-template">
-        <h1>admin</h1>
+        <div id="super-admin-contaier">
+            <div id="super-admin-header-container">
+                <h2>User's</h2>
+                <button id="add-user-btn">Add new</button>
+            </div>
+        </div>
     </template>
 
     <script>
-        function myFunc() {
+        (() => {
             let template = document.getElementById('super-admin-template');
             let clon = template.content.cloneNode(true);
             document.getElementById('container').appendChild(clon);
-        }
-        
-        function myFuncTwo() {
-            let template = document.getElementById('admin-template');
-            let clon = template.content.cloneNode(true);
-            document.getElementById('container').removeChild('super-admin-template');
-            document.getElementById('container').appendChild(clon);
-        }
+        })();
     </script>
+
+    <script src="./superAdmin.js"></script>
 
 </body>
 

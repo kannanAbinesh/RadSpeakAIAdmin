@@ -137,6 +137,22 @@
     }
 }
 
+#show-hide-password-container {
+    display: block;
+    width: 100%;
+    position: relative;
+    display: none;
+}
+
+#togglePassword-show, #togglePassword-hide {
+    position: absolute;
+    top: -41px;
+    font-size: 20px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 9;
+}
+
 @media screen and (max-width: 768px) {
     #admin-login-container {
         grid-template-columns: 100%;
@@ -144,6 +160,10 @@
 
     #admin-login-image-container {
         display: none;
+    }
+
+    #show-hide-password-container {
+        display: block;
     }
 
     #showpassword-container {

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RadSpeakAI Admin Login</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="./commonFunction.js"></script>
     <link rel="stylesheet" href="./index.css"> <!-- login styles -->
 
@@ -31,6 +34,10 @@
                 <div id="field-container">
                     <label id="field-label">Enter the password</label>
                     <input type="password" id="login-password" placeholder="Password" />
+                    <div id="show-hide-password-container">
+                        <i id="togglePassword-hide" class="fas fa-eye-slash"></i>
+                        <i id="togglePassword-show" class="fa fa-eye" aria-hidden="true"></i>
+                    </div>
                 </div>
                 <div id="login-form-grid-container">
                     <label id="forget-password">Forget Password?</label>

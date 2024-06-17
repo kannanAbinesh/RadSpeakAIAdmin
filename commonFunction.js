@@ -8,13 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.insertAdjacentHTML('beforeend', bootstrapLinks);
 
     /* Checl user login status. */
-    (async (token) => {
+    (async (retrivedToken) => {
+        let token = retrivedToken.substring(1)
         if (!token) {
             changeRoutesFunction('/index.html')
             return '';
         };
 
-        let { data: { status } } = await axios.post('http://192.168.1.15:3000/api/v1/checkLoginStatus', { token: token.substring(1) });
+        let { data: { status } } = await axios.post('http://192.168.1.15:3000/api/v1/checkLoginStatus', { token });
 
         if (status == 200) changeRoutesFunction('/superAdmin.html');
         else changeRoutesFunction('/index.html');
