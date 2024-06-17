@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./superAdmin.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="./commonFunction.js"></script>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header id="nav-bar-container">
+        <div id="nav-bar-logo-container">
+            <img src="../../../public/images/radscribeLogo.jpeg" alt="Logo" id="logo" />
+            <h1 id="header">RadSpeak AI</h1>
+        </div>
+        <i class="fa fa-sign-out" id="logout-btn" title="Logout"></i>
+    </header>
+
+    <div id="toast-container"></div> <!-- toaster container -->
+
+    <div id="container"></div>
+
+    <button onclick="myFunc()">super</button>
+    <button onclick="myFuncTwo()">admin</button>
+
+    <template id="super-admin-template">
+        <h1>super admin</h1>
+    </template>
+
+    <template id="admin-template">
+        <h1>admin</h1>
+    </template>
+
+    <script>
+        function myFunc() {
+            let template = document.getElementById('super-admin-template');
+            let clon = template.content.cloneNode(true);
+            document.getElementById('container').appendChild(clon);
+        }
+        
+        function myFuncTwo() {
+            let template = document.getElementById('admin-template');
+            let clon = template.content.cloneNode(true);
+            document.getElementById('container').removeChild('super-admin-template');
+            document.getElementById('container').appendChild(clon);
+        }
+    </script>
+
+</body>
+
+</html>
