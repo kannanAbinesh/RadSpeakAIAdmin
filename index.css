@@ -21,7 +21,7 @@
 #admin-login-form-container {
     background-color: #cfcfcf2f;
     display: grid;
-    place-items: center;
+    /* place-items: center; */
 }
 
 #admin-login-form {
