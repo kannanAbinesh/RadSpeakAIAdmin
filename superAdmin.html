@@ -24,13 +24,89 @@
 
     <div id="toast-container"></div> <!-- toaster container -->
 
-    <div id="container"></div>
+    <div id="container"></div> <!-- Template container to append admin and super admin data as a table. -->
 
     <template id="super-admin-template">
-        <div id="super-admin-contaier">
+        <div id="super-admin-container">
             <div id="super-admin-header-container">
-                <h2>User's</h2>
-                <button id="add-user-btn">Add new</button>
+                <h2 id="template-header">Admin User</h2>
+                <div>
+                    <button id="add-user-btn">Add new</button>
+                </div>
+            </div>
+
+            <div id="table-container">
+                <div id="table-wrapper">
+                    <table id="table-styles">
+                        <thead id="table-header-row">
+                            <tr>
+                                <th id="table-header-name">Name</th>
+                                <th id="table-header-email">EmailId</th>
+                                <th id="table-header-passsword">Password</th>
+                                <th id="table-header-role">Role</th>
+                                <th id="table-header-status">Status</th>
+                                <th id="table-header-edit">Edit</th>
+                                <th id="table-header-delete">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <tr id="table-data-row">
+                                <td data-cell="name" id="table-body-name">Abinesh</td>
+                                <td data-cell="EmailId" id="table-body-email">abineshKannan98@gmail.com</td>
+                                <td data-cell="password" id="table-body-password">Qwerty@123</td>
+                                <td data-cell="role" id="table-body-role">1</td>
+                                <td data-cell="status" id="table-body-status">Active</td>
+                                <td data-cell="edit" id="table-body-edit"><span onclick="alert('hi')" id="edit-btn">Edit</span></td>
+                                <td data-cell="delete" id="table-body-delete"><span id="delete-btn" onclick="alert('bye')" >Delete</span></td>
+                            </tr>
+                            <tr id="table-data-row">
+                                <td data-cell="name" id="table-body-name">Abinesh</td>
+                                <td data-cell="EmailId" id="table-body-email">abineshKannan98@gmail.com</td>
+                                <td data-cell="password" id="table-body-password">Qwerty@123</td>
+                                <td data-cell="role" id="table-body-role">1</td>
+                                <td data-cell="status" id="table-body-status">Active</td>
+                                <td data-cell="edit" id="table-body-edit"><span onclick="alert('hi')" id="edit-btn">Edit</span></td>
+                                <td data-cell="delete" id="table-body-delete"><span id="delete-btn" onclick="alert('bye')" >Delete</span></td>
+                            </tr>
+                            <tr id="table-data-row">
+                                <td data-cell="name" id="table-body-name">Abinesh</td>
+                                <td data-cell="EmailId" id="table-body-email">abineshKannan98@gmail.com</td>
+                                <td data-cell="password" id="table-body-password">Qwerty@123</td>
+                                <td data-cell="role" id="table-body-role">1</td>
+                                <td data-cell="status" id="table-body-status">Active</td>
+                                <td data-cell="edit" id="table-body-edit"><span onclick="alert('hi')" id="edit-btn">Edit</span></td>
+                                <td data-cell="delete" id="table-body-delete"><span id="delete-btn" onclick="alert('bye')" >Delete</span></td>
+                            </tr>
+                            <tr id="table-data-row">
+                                <td data-cell="name" id="table-body-name">Abinesh</td>
+                                <td data-cell="EmailId" id="table-body-email">abineshKannan98@gmail.com</td>
+                                <td data-cell="password" id="table-body-password">Qwerty@123</td>
+                                <td data-cell="role" id="table-body-role">1</td>
+                                <td data-cell="status" id="table-body-status">Active</td>
+                                <td data-cell="edit" id="table-body-edit"><span onclick="alert('hi')" id="edit-btn">Edit</span></td>
+                                <td data-cell="delete" id="table-body-delete"><span id="delete-btn" onclick="alert('bye')" >Delete</span></td>
+                            </tr>
+                            <tr id="table-data-row">
+                                <td data-cell="name" id="table-body-name">Abinesh</td>
+                                <td data-cell="EmailId" id="table-body-email">abineshKannan98@gmail.com</td>
+                                <td data-cell="password" id="table-body-password">Qwerty@123</td>
+                                <td data-cell="role" id="table-body-role">1</td>
+                                <td data-cell="status" id="table-body-status">Active</td>
+                                <td data-cell="edit" id="table-body-edit"><span onclick="alert('hi')" id="edit-btn">Edit</span></td>
+                                <td data-cell="delete" id="table-body-delete"><span id="delete-btn" onclick="alert('bye')" >Delete</span></td>
+                            </tr>
+                            <tr id="table-data-row">
+                                <td data-cell="name" id="table-body-name">Abinesh</td>
+                                <td data-cell="EmailId" id="table-body-email">abineshKannan98@gmail.com</td>
+                                <td data-cell="password" id="table-body-password">Qwerty@123</td>
+                                <td data-cell="role" id="table-body-role">1</td>
+                                <td data-cell="status" id="table-body-status">Active</td>
+                                <td data-cell="edit" id="table-body-edit"><span onclick="alert('hi')" id="edit-btn">Edit</span></td>
+                                <td data-cell="delete" id="table-body-delete"><span id="delete-btn" onclick="alert('bye')" >Delete</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </template>

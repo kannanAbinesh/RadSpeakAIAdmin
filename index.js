@@ -41,7 +41,7 @@ loginSubmitBtn.onclick = async () => {
         return '';
     };
 
-    let { data, data: { status } } = await axios.post('http://192.168.1.15:3000/api/v1/login', {
+    let { data, data: { status } } = await axios.post('https://radspeakaiservernode-git-main-kannanabineshs-projects.vercel.app/api/v2/login', {
         emailId: emailId.value,
         password: password.value
     });

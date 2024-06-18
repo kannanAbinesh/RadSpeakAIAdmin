@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return '';
         };
 
-        let { data: { status } } = await axios.post('http://192.168.1.15:3000/api/v1/checkLoginStatus', { token });
+        let { data: { status } } = await axios.post('https://radspeakaiservernode-git-main-kannanabineshs-projects.vercel.app/api/v2/checkLoginStatus', { token });
 
         if (status == 200) changeRoutesFunction('/superAdmin.html');
         else changeRoutesFunction('/index.html');
