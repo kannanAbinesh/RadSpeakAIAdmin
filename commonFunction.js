@@ -9,11 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* Checl user login status. */
     (async (retrivedToken) => {
-        let token = retrivedToken.substring(1)
+        let token = retrivedToken;
         if (!token) {
             changeRoutesFunction('/index.html')
             return '';
         };
+        token = token.substring(1);
 
         let { data: { status } } = await axios.post('https://radspeakaiservernode-git-main-kannanabineshs-projects.vercel.app/api/v2/checkLoginStatus', { token });
 
