@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         token = token.substring(1);
 
-        let { data: { status } } = await axios.post('https://radspeakaiservernode-git-main-kannanabineshs-projects.vercel.app/api/v2/checkLoginStatus', { token });
+        let { data: { status } } = await axios.post('http://localhost:3000/api/v1/checkLoginStatus', { token });
 
         if (status == 200) changeRoutesFunction('/superAdmin.html');
         else changeRoutesFunction('/index.html');
@@ -48,3 +48,11 @@ function showToast(message, isError) {
     toastContainer.appendChild(toast);
     setTimeout(() => { toast.remove(); }, 3000);
 };
+
+
+
+/* 
+
+"headers": {
+        "Access-Control-Allow-Origin": "*" 
+      }*/

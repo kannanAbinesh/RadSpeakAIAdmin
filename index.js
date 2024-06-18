@@ -40,17 +40,31 @@ loginSubmitBtn.onclick = async () => {
         showToast('Please provide password in correct format (It should atleast have one capital letter, one special characters, one numbers and the length of the password should me more than 8 characters.)', true);
         return '';
     };
+    /*https://radspeakaiservernode-git-main-kannanabineshs-projects.vercel.app/api/v2/login */
+    // let { data, data: { status } } = await axios.post('http://localhost:3000/api/v1/login', {
+    //     emailId: emailId.value,
+    //     password: password.value
+    // });
 
-    let { data, data: { status } } = await axios.post('https://radspeakaiservernode-git-main-kannanabineshs-projects.vercel.app/api/v2/login', {
-        emailId: emailId.value,
-        password: password.value
+    let response = await fetch('http://localhost:3000/api/v1/login', {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            emailId: emailId.value,
+            password: password.value
+        })
     });
 
-    if (status == 200) {
+    let resp = await response.json()
+
+    if (resp?.status == 200) {
         const date = new Date();
         date.setTime(date.getTime() + (3 * 24 * 60 * 60 * 1000));
         const expires = "expires=" + date.toUTCString();
-        document.cookie = `id_token=${data?.token}; expires=${expires}`;
+        document.cookie = `id_token=${resp?.token}; expires=${expires}`;
         window.location.href = './superAdmin.html';
     } else {
         showToast('Something went wrong in login. Please try again later', true);
