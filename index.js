@@ -46,7 +46,7 @@ loginSubmitBtn.onclick = async () => {
     //     password: password.value
     // });
 
-    let response = await fetch('http://localhost:3000/api/v1/login', {
+    let response = await fetch('https://radspeakaiservernode-git-main-kannanabineshs-projects.vercel.app/api/v2/login', {
         method: 'POST',
         headers: {
             Accept: 'application/json',
